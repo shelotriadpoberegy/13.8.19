@@ -1,0 +1,13 @@
+visitors=int(input('Количество посетителей: '))
+price=0.0
+for i in range(visitors):
+  age=int(input('Возраст посетителя: '))
+  if age < 18:
+    price=price+0
+  elif 18 <= age < 25:
+    price=price+990
+  else:
+    price=price+1390
+if visitors > 3:
+  price = price - (price / 10)
+print('Общая стоимость билетов',str(round(price)),'рублей')
